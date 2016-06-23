@@ -2,6 +2,8 @@ Package tz
 ==========
 
 ![Project status](https://img.shields.io/badge/version-1.0.0-green.svg)
+[![Build Status](https://semaphoreci.com/api/v1/joeybloggs/tz/branches/master/badge.svg)](https://semaphoreci.com/joeybloggs/tz)
+[![Go Report Card](https://goreportcard.com/badge/github.com/go-playground/tz)](https://goreportcard.com/report/github.com/go-playground/tz)
 [![GoDoc](https://godoc.org/github.com/go-playground/tz?status.svg)](https://godoc.org/github.com/go-playground/tz)
 ![License](https://img.shields.io/dub/l/vibe-d.svg)
 
