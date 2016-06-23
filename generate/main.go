@@ -11,7 +11,7 @@ import (
 	"text/template"
 	"time"
 
-	"bitbucket.org/metricaid/rnd/timezone_info"
+	"github.com/go-playground/tz"
 )
 
 const (
