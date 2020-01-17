@@ -19,16 +19,6 @@ var (
 			},
 		},
 		{
-			Code: "AX",
-			Name: "Aland Islands",
-			Zones: []Zone{
-				{
-					CountryCode: "AX",
-					Name:        "Europe/Mariehamn",
-				},
-			},
-		},
-		{
 			Code: "AL",
 			Name: "Albania",
 			Zones: []Zone{
@@ -398,7 +388,7 @@ var (
 		},
 		{
 			Code: "BO",
-			Name: "Bolivia",
+			Name: "Bolivia, Plurinational State of",
 			Zones: []Zone{
 				{
 					CountryCode: "BO",
@@ -408,7 +398,7 @@ var (
 		},
 		{
 			Code: "BQ",
-			Name: "Bonaire, Saint Eustatius and Saba ",
+			Name: "Bonaire, Sint Eustatius and Saba",
 			Zones: []Zone{
 				{
 					CountryCode: "BQ",
@@ -522,18 +512,8 @@ var (
 			},
 		},
 		{
-			Code: "VG",
-			Name: "British Virgin Islands",
-			Zones: []Zone{
-				{
-					CountryCode: "VG",
-					Name:        "America/Tortola",
-				},
-			},
-		},
-		{
 			Code: "BN",
-			Name: "Brunei",
+			Name: "Brunei Darussalam",
 			Zones: []Zone{
 				{
 					CountryCode: "BN",
@@ -755,6 +735,10 @@ var (
 			Zones: []Zone{
 				{
 					CountryCode: "CL",
+					Name:        "America/Punta_Arenas",
+				},
+				{
+					CountryCode: "CL",
 					Name:        "America/Santiago",
 				},
 				{
@@ -789,7 +773,7 @@ var (
 		},
 		{
 			Code: "CC",
-			Name: "Cocos Islands",
+			Name: "Cocos (Keeling) Islands",
 			Zones: []Zone{
 				{
 					CountryCode: "CC",
@@ -814,6 +798,30 @@ var (
 				{
 					CountryCode: "KM",
 					Name:        "Indian/Comoro",
+				},
+			},
+		},
+		{
+			Code: "CG",
+			Name: "Congo",
+			Zones: []Zone{
+				{
+					CountryCode: "CG",
+					Name:        "Africa/Brazzaville",
+				},
+			},
+		},
+		{
+			Code: "CD",
+			Name: "Congo, the Democratic Republic of the",
+			Zones: []Zone{
+				{
+					CountryCode: "CD",
+					Name:        "Africa/Kinshasa",
+				},
+				{
+					CountryCode: "CD",
+					Name:        "Africa/Lubumbashi",
 				},
 			},
 		},
@@ -873,6 +881,10 @@ var (
 			Zones: []Zone{
 				{
 					CountryCode: "CY",
+					Name:        "Asia/Famagusta",
+				},
+				{
+					CountryCode: "CY",
 					Name:        "Asia/Nicosia",
 				},
 			},
@@ -888,16 +900,12 @@ var (
 			},
 		},
 		{
-			Code: "CD",
-			Name: "Democratic Republic of the Congo",
+			Code: "CI",
+			Name: "Côte d'Ivoire",
 			Zones: []Zone{
 				{
-					CountryCode: "CD",
-					Name:        "Africa/Kinshasa",
-				},
-				{
-					CountryCode: "CD",
-					Name:        "Africa/Lubumbashi",
+					CountryCode: "CI",
+					Name:        "Africa/Abidjan",
 				},
 			},
 		},
@@ -938,16 +946,6 @@ var (
 				{
 					CountryCode: "DO",
 					Name:        "America/Santo_Domingo",
-				},
-			},
-		},
-		{
-			Code: "TL",
-			Name: "East Timor",
-			Zones: []Zone{
-				{
-					CountryCode: "TL",
-					Name:        "Asia/Dili",
 				},
 			},
 		},
@@ -1027,7 +1025,7 @@ var (
 		},
 		{
 			Code: "FK",
-			Name: "Falkland Islands",
+			Name: "Falkland Islands (Malvinas)",
 			Zones: []Zone{
 				{
 					CountryCode: "FK",
@@ -1305,6 +1303,16 @@ var (
 			Zones: []Zone{},
 		},
 		{
+			Code: "VA",
+			Name: "Holy See (Vatican City State)",
+			Zones: []Zone{
+				{
+					CountryCode: "VA",
+					Name:        "Europe/Vatican",
+				},
+			},
+		},
+		{
 			Code: "HN",
 			Name: "Honduras",
 			Zones: []Zone{
@@ -1378,7 +1386,7 @@ var (
 		},
 		{
 			Code: "IR",
-			Name: "Iran",
+			Name: "Iran, Islamic Republic of",
 			Zones: []Zone{
 				{
 					CountryCode: "IR",
@@ -1433,16 +1441,6 @@ var (
 				{
 					CountryCode: "IT",
 					Name:        "Europe/Rome",
-				},
-			},
-		},
-		{
-			Code: "CI",
-			Name: "Ivory Coast",
-			Zones: []Zone{
-				{
-					CountryCode: "CI",
-					Name:        "Africa/Abidjan",
 				},
 			},
 		},
@@ -1504,7 +1502,15 @@ var (
 				},
 				{
 					CountryCode: "KZ",
+					Name:        "Asia/Atyrau",
+				},
+				{
+					CountryCode: "KZ",
 					Name:        "Asia/Oral",
+				},
+				{
+					CountryCode: "KZ",
+					Name:        "Asia/Qostanay",
 				},
 				{
 					CountryCode: "KZ",
@@ -1541,9 +1547,24 @@ var (
 			},
 		},
 		{
-			Code:  "XK",
-			Name:  "Kosovo",
-			Zones: []Zone{},
+			Code: "KP",
+			Name: "Korea, Democratic People's Republic of",
+			Zones: []Zone{
+				{
+					CountryCode: "KP",
+					Name:        "Asia/Pyongyang",
+				},
+			},
+		},
+		{
+			Code: "KR",
+			Name: "Korea, Republic of",
+			Zones: []Zone{
+				{
+					CountryCode: "KR",
+					Name:        "Asia/Seoul",
+				},
+			},
 		},
 		{
 			Code: "KW",
@@ -1567,7 +1588,7 @@ var (
 		},
 		{
 			Code: "LA",
-			Name: "Laos",
+			Name: "Lao People's Democratic Republic",
 			Zones: []Zone{
 				{
 					CountryCode: "LA",
@@ -1667,7 +1688,7 @@ var (
 		},
 		{
 			Code: "MK",
-			Name: "Macedonia",
+			Name: "Macedonia, the Former Yugoslav Republic of",
 			Zones: []Zone{
 				{
 					CountryCode: "MK",
@@ -1845,7 +1866,7 @@ var (
 		},
 		{
 			Code: "FM",
-			Name: "Micronesia",
+			Name: "Micronesia, Federated States of",
 			Zones: []Zone{
 				{
 					CountryCode: "FM",
@@ -1863,7 +1884,7 @@ var (
 		},
 		{
 			Code: "MD",
-			Name: "Moldova",
+			Name: "Moldova, Republic of",
 			Zones: []Zone{
 				{
 					CountryCode: "MD",
@@ -1945,7 +1966,7 @@ var (
 			Zones: []Zone{
 				{
 					CountryCode: "MM",
-					Name:        "Asia/Rangoon",
+					Name:        "Asia/Yangon",
 				},
 			},
 		},
@@ -1988,11 +2009,6 @@ var (
 					Name:        "Europe/Amsterdam",
 				},
 			},
-		},
-		{
-			Code:  "AN",
-			Name:  "Netherlands Antilles",
-			Zones: []Zone{},
 		},
 		{
 			Code: "NC",
@@ -2069,16 +2085,6 @@ var (
 			},
 		},
 		{
-			Code: "KP",
-			Name: "North Korea",
-			Zones: []Zone{
-				{
-					CountryCode: "KP",
-					Name:        "Asia/Pyongyang",
-				},
-			},
-		},
-		{
 			Code: "MP",
 			Name: "Northern Mariana Islands",
 			Zones: []Zone{
@@ -2130,7 +2136,7 @@ var (
 		},
 		{
 			Code: "PS",
-			Name: "Palestinian Territory",
+			Name: "Palestine, State of",
 			Zones: []Zone{
 				{
 					CountryCode: "PS",
@@ -2255,26 +2261,6 @@ var (
 			},
 		},
 		{
-			Code: "CG",
-			Name: "Republic of the Congo",
-			Zones: []Zone{
-				{
-					CountryCode: "CG",
-					Name:        "Africa/Brazzaville",
-				},
-			},
-		},
-		{
-			Code: "RE",
-			Name: "Reunion",
-			Zones: []Zone{
-				{
-					CountryCode: "RE",
-					Name:        "Indian/Reunion",
-				},
-			},
-		},
-		{
 			Code: "RO",
 			Name: "Romania",
 			Zones: []Zone{
@@ -2286,7 +2272,7 @@ var (
 		},
 		{
 			Code: "RU",
-			Name: "Russia",
+			Name: "Russian Federation",
 			Zones: []Zone{
 				{
 					CountryCode: "RU",
@@ -2382,7 +2368,7 @@ var (
 				},
 				{
 					CountryCode: "RU",
-					Name:        "Europe/Simferopol",
+					Name:        "Europe/Saratov",
 				},
 				{
 					CountryCode: "RU",
@@ -2405,6 +2391,16 @@ var (
 			},
 		},
 		{
+			Code: "RE",
+			Name: "Réunion",
+			Zones: []Zone{
+				{
+					CountryCode: "RE",
+					Name:        "Indian/Reunion",
+				},
+			},
+		},
+		{
 			Code: "BL",
 			Name: "Saint Barthélemy",
 			Zones: []Zone{
@@ -2416,7 +2412,7 @@ var (
 		},
 		{
 			Code: "SH",
-			Name: "Saint Helena",
+			Name: "Saint Helena, Ascension and Tristan da Cunha",
 			Zones: []Zone{
 				{
 					CountryCode: "SH",
@@ -2446,7 +2442,7 @@ var (
 		},
 		{
 			Code: "MF",
-			Name: "Saint Martin",
+			Name: "Saint Martin (French part)",
 			Zones: []Zone{
 				{
 					CountryCode: "MF",
@@ -2535,11 +2531,6 @@ var (
 			},
 		},
 		{
-			Code:  "CS",
-			Name:  "Serbia and Montenegro",
-			Zones: []Zone{},
-		},
-		{
 			Code: "SC",
 			Name: "Seychelles",
 			Zones: []Zone{
@@ -2571,7 +2562,7 @@ var (
 		},
 		{
 			Code: "SX",
-			Name: "Sint Maarten",
+			Name: "Sint Maarten (Dutch part)",
 			Zones: []Zone{
 				{
 					CountryCode: "SX",
@@ -2636,16 +2627,6 @@ var (
 				{
 					CountryCode: "GS",
 					Name:        "Atlantic/South_Georgia",
-				},
-			},
-		},
-		{
-			Code: "KR",
-			Name: "South Korea",
-			Zones: []Zone{
-				{
-					CountryCode: "KR",
-					Name:        "Asia/Seoul",
 				},
 			},
 		},
@@ -2749,7 +2730,7 @@ var (
 		},
 		{
 			Code: "SY",
-			Name: "Syria",
+			Name: "Syrian Arab Republic",
 			Zones: []Zone{
 				{
 					CountryCode: "SY",
@@ -2759,7 +2740,7 @@ var (
 		},
 		{
 			Code: "TW",
-			Name: "Taiwan",
+			Name: "Taiwan, Province of China",
 			Zones: []Zone{
 				{
 					CountryCode: "TW",
@@ -2779,7 +2760,7 @@ var (
 		},
 		{
 			Code: "TZ",
-			Name: "Tanzania",
+			Name: "Tanzania, United Republic of",
 			Zones: []Zone{
 				{
 					CountryCode: "TZ",
@@ -2794,6 +2775,16 @@ var (
 				{
 					CountryCode: "TH",
 					Name:        "Asia/Bangkok",
+				},
+			},
+		},
+		{
+			Code: "TL",
+			Name: "Timor-Leste",
+			Zones: []Zone{
+				{
+					CountryCode: "TL",
+					Name:        "Asia/Dili",
 				},
 			},
 		},
@@ -2888,16 +2879,6 @@ var (
 			},
 		},
 		{
-			Code: "VI",
-			Name: "U.S. Virgin Islands",
-			Zones: []Zone{
-				{
-					CountryCode: "VI",
-					Name:        "America/St_Thomas",
-				},
-			},
-		},
-		{
 			Code: "UG",
 			Name: "Uganda",
 			Zones: []Zone{
@@ -2914,6 +2895,10 @@ var (
 				{
 					CountryCode: "UA",
 					Name:        "Europe/Kiev",
+				},
+				{
+					CountryCode: "UA",
+					Name:        "Europe/Simferopol",
 				},
 				{
 					CountryCode: "UA",
@@ -3073,10 +3058,6 @@ var (
 			Zones: []Zone{
 				{
 					CountryCode: "UM",
-					Name:        "Pacific/Johnston",
-				},
-				{
-					CountryCode: "UM",
 					Name:        "Pacific/Midway",
 				},
 				{
@@ -3120,18 +3101,8 @@ var (
 			},
 		},
 		{
-			Code: "VA",
-			Name: "Vatican",
-			Zones: []Zone{
-				{
-					CountryCode: "VA",
-					Name:        "Europe/Vatican",
-				},
-			},
-		},
-		{
 			Code: "VE",
-			Name: "Venezuela",
+			Name: "Venezuela, Bolivarian Republic of",
 			Zones: []Zone{
 				{
 					CountryCode: "VE",
@@ -3141,11 +3112,31 @@ var (
 		},
 		{
 			Code: "VN",
-			Name: "Vietnam",
+			Name: "Viet Nam",
 			Zones: []Zone{
 				{
 					CountryCode: "VN",
 					Name:        "Asia/Ho_Chi_Minh",
+				},
+			},
+		},
+		{
+			Code: "VG",
+			Name: "Virgin Islands, British",
+			Zones: []Zone{
+				{
+					CountryCode: "VG",
+					Name:        "America/Tortola",
+				},
+			},
+		},
+		{
+			Code: "VI",
+			Name: "Virgin Islands, U.S.",
+			Zones: []Zone{
+				{
+					CountryCode: "VI",
+					Name:        "America/St_Thomas",
 				},
 			},
 		},
@@ -3196,6 +3187,16 @@ var (
 				{
 					CountryCode: "ZW",
 					Name:        "Africa/Harare",
+				},
+			},
+		},
+		{
+			Code: "AX",
+			Name: "Åland Islands",
+			Zones: []Zone{
+				{
+					CountryCode: "AX",
+					Name:        "Europe/Mariehamn",
 				},
 			},
 		},
