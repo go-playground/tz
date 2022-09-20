@@ -230,10 +230,6 @@ var (
 				},
 				{
 					CountryCode: "AU",
-					Name:        "Australia/Currie",
-				},
-				{
-					CountryCode: "AU",
 					Name:        "Australia/Darwin",
 				},
 				{
@@ -388,7 +384,7 @@ var (
 		},
 		{
 			Code: "BO",
-			Name: "Bolivia, Plurinational State of",
+			Name: "Bolivia (Plurinational State of)",
 			Zones: []Zone{
 				{
 					CountryCode: "BO",
@@ -552,6 +548,16 @@ var (
 			},
 		},
 		{
+			Code: "CV",
+			Name: "Cabo Verde",
+			Zones: []Zone{
+				{
+					CountryCode: "CV",
+					Name:        "Atlantic/Cape_Verde",
+				},
+			},
+		},
+		{
 			Code: "KH",
 			Name: "Cambodia",
 			Zones: []Zone{
@@ -690,16 +696,6 @@ var (
 			},
 		},
 		{
-			Code: "CV",
-			Name: "Cape Verde",
-			Zones: []Zone{
-				{
-					CountryCode: "CV",
-					Name:        "Atlantic/Cape_Verde",
-				},
-			},
-		},
-		{
 			Code: "KY",
 			Name: "Cayman Islands",
 			Zones: []Zone{
@@ -813,7 +809,7 @@ var (
 		},
 		{
 			Code: "CD",
-			Name: "Congo, the Democratic Republic of the",
+			Name: "Congo, Democratic Republic of the",
 			Zones: []Zone{
 				{
 					CountryCode: "CD",
@@ -891,7 +887,7 @@ var (
 		},
 		{
 			Code: "CZ",
-			Name: "Czech Republic",
+			Name: "Czechia",
 			Zones: []Zone{
 				{
 					CountryCode: "CZ",
@@ -1010,6 +1006,16 @@ var (
 				{
 					CountryCode: "EE",
 					Name:        "Europe/Tallinn",
+				},
+			},
+		},
+		{
+			Code: "SZ",
+			Name: "Eswatini",
+			Zones: []Zone{
+				{
+					CountryCode: "SZ",
+					Name:        "Africa/Mbabane",
 				},
 			},
 		},
@@ -1195,7 +1201,7 @@ var (
 				},
 				{
 					CountryCode: "GL",
-					Name:        "America/Godthab",
+					Name:        "America/Nuuk",
 				},
 				{
 					CountryCode: "GL",
@@ -1304,7 +1310,7 @@ var (
 		},
 		{
 			Code: "VA",
-			Name: "Holy See (Vatican City State)",
+			Name: "Holy See",
 			Zones: []Zone{
 				{
 					CountryCode: "VA",
@@ -1386,7 +1392,7 @@ var (
 		},
 		{
 			Code: "IR",
-			Name: "Iran, Islamic Republic of",
+			Name: "Iran (Islamic Republic of)",
 			Zones: []Zone{
 				{
 					CountryCode: "IR",
@@ -1534,7 +1540,7 @@ var (
 			Zones: []Zone{
 				{
 					CountryCode: "KI",
-					Name:        "Pacific/Enderbury",
+					Name:        "Pacific/Kanton",
 				},
 				{
 					CountryCode: "KI",
@@ -1548,7 +1554,7 @@ var (
 		},
 		{
 			Code: "KP",
-			Name: "Korea, Democratic People's Republic of",
+			Name: "Korea (Democratic People's Republic of)",
 			Zones: []Zone{
 				{
 					CountryCode: "KP",
@@ -1683,16 +1689,6 @@ var (
 				{
 					CountryCode: "MO",
 					Name:        "Asia/Macau",
-				},
-			},
-		},
-		{
-			Code: "MK",
-			Name: "Macedonia, the Former Yugoslav Republic of",
-			Zones: []Zone{
-				{
-					CountryCode: "MK",
-					Name:        "Europe/Skopje",
 				},
 			},
 		},
@@ -1866,7 +1862,7 @@ var (
 		},
 		{
 			Code: "FM",
-			Name: "Micronesia, Federated States of",
+			Name: "Micronesia (Federated States of)",
 			Zones: []Zone{
 				{
 					CountryCode: "FM",
@@ -2081,6 +2077,16 @@ var (
 				{
 					CountryCode: "NF",
 					Name:        "Pacific/Norfolk",
+				},
+			},
+		},
+		{
+			Code: "MK",
+			Name: "North Macedonia",
+			Zones: []Zone{
+				{
+					CountryCode: "MK",
+					Name:        "Europe/Skopje",
 				},
 			},
 		},
@@ -2699,16 +2705,6 @@ var (
 			},
 		},
 		{
-			Code: "SZ",
-			Name: "Swaziland",
-			Zones: []Zone{
-				{
-					CountryCode: "SZ",
-					Name:        "Africa/Mbabane",
-				},
-			},
-		},
-		{
 			Code: "SE",
 			Name: "Sweden",
 			Zones: []Zone{
@@ -2922,7 +2918,7 @@ var (
 		},
 		{
 			Code: "GB",
-			Name: "United Kingdom",
+			Name: "United Kingdom of Great Britain and Northern Ireland",
 			Zones: []Zone{
 				{
 					CountryCode: "GB",
@@ -2931,8 +2927,22 @@ var (
 			},
 		},
 		{
+			Code: "UM",
+			Name: "United States Minor Outlying Islands",
+			Zones: []Zone{
+				{
+					CountryCode: "UM",
+					Name:        "Pacific/Midway",
+				},
+				{
+					CountryCode: "UM",
+					Name:        "Pacific/Wake",
+				},
+			},
+		},
+		{
 			Code: "US",
-			Name: "United States",
+			Name: "United States of America",
 			Zones: []Zone{
 				{
 					CountryCode: "US",
@@ -3053,20 +3063,6 @@ var (
 			},
 		},
 		{
-			Code: "UM",
-			Name: "United States Minor Outlying Islands",
-			Zones: []Zone{
-				{
-					CountryCode: "UM",
-					Name:        "Pacific/Midway",
-				},
-				{
-					CountryCode: "UM",
-					Name:        "Pacific/Wake",
-				},
-			},
-		},
-		{
 			Code: "UY",
 			Name: "Uruguay",
 			Zones: []Zone{
@@ -3102,7 +3098,7 @@ var (
 		},
 		{
 			Code: "VE",
-			Name: "Venezuela, Bolivarian Republic of",
+			Name: "Venezuela (Bolivarian Republic of)",
 			Zones: []Zone{
 				{
 					CountryCode: "VE",
@@ -3122,7 +3118,7 @@ var (
 		},
 		{
 			Code: "VG",
-			Name: "Virgin Islands, British",
+			Name: "Virgin Islands (British)",
 			Zones: []Zone{
 				{
 					CountryCode: "VG",
@@ -3132,7 +3128,7 @@ var (
 		},
 		{
 			Code: "VI",
-			Name: "Virgin Islands, U.S.",
+			Name: "Virgin Islands (U.S.)",
 			Zones: []Zone{
 				{
 					CountryCode: "VI",
