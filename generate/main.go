@@ -1,10 +1,13 @@
 package main
 
 import (
+	"archive/zip"
+	"bytes"
 	"encoding/csv"
 	"fmt"
 	"io"
 	"log"
+	"net/http"
 	"os"
 	"os/exec"
 	"sort"
@@ -15,7 +18,6 @@ import (
 )
 
 const (
-	workDir     = "tzdb"
 	dbFilename  = "timezonedb.csv.zip"
 	dbURL       = "https://timezonedb.com/files/" + dbFilename
 	countryFile = "country.csv"
@@ -53,7 +55,6 @@ func (a byZoneName) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a byZoneName) Less(i, j int) bool { return a[i].Name < a[j].Name }
 
 func main() {
-
 	tmpl, err := template.New("gen").Parse(output)
 	if err != nil {
 		log.Fatal("ERROR parsing template:", err)
@@ -64,32 +65,54 @@ func main() {
 		log.Fatal("ERROR determining current working DIR:", err)
 	}
 
-	cmd := exec.Command("mkdir", "-p", workDir)
-	err = cmd.Run()
+	resp, err := http.DefaultClient.Get(dbURL)
 	if err != nil {
-		log.Fatal("ERROR creating working DIR:", err)
+		log.Fatal("ERROR download database file", err)
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		log.Fatal("ERROR download database file: response status is:", resp.Status)
 	}
 
-	err = os.Chdir(workDir)
+	buff := bytes.NewBuffer([]byte{})
+	size, err := io.Copy(buff, resp.Body)
 	if err != nil {
-		log.Fatal("ERROR switching to working DIR:", err)
+		log.Fatal(err)
+	}
+	ar, err := zip.NewReader(bytes.NewReader(buff.Bytes()), size)
+	if err != nil {
+		log.Fatal("ERROR read zip:", err)
 	}
 
-	cmd = exec.Command("curl", "-O", dbURL)
-
-	err = cmd.Run()
-	if err != nil {
-		log.Fatal("ERROR downloading file:", err)
+	var cf, zf io.ReadCloser
+	for _, f := range ar.File {
+		switch f.Name {
+		case countryFile:
+			cf, err = f.Open()
+			if err != nil {
+				log.Fatal("ERROR open archive file:", err)
+			}
+		case zoneFile:
+			zf, err = f.Open()
+			if err != nil {
+				log.Fatal("ERROR open archive file:", err)
+			}
+		default:
+			continue
+		}
 	}
-
-	cmd = exec.Command("unzip", dbFilename)
-
-	err = cmd.Run()
-	if err != nil {
-		log.Fatal("ERROR Unzipping file:", err)
+	if cf == nil {
+		log.Fatal("ERROR country file not found in archive")
 	}
+	if zf == nil {
+		log.Fatal("ERROR zones file not found in archive")
+	}
+	defer func() {
+		cf.Close()
+		zf.Close()
+	}()
 
-	countries, err := process()
+	countries, err := process(cf, zf)
 	if err != nil {
 		log.Fatal("ERROR processing files:", err)
 	}
@@ -113,31 +136,18 @@ func main() {
 	f.Close()
 
 	// after file written run gofmt on file
-	cmd = exec.Command("gofmt", "-s", "-w", outputFile)
+	cmd := exec.Command("gofmt", "-s", "-w", outputFile)
 	if err = cmd.Run(); err != nil {
 		log.Fatal("ERROR running gofmt:", err)
 	}
-
-	err = os.RemoveAll(workDir)
-	if err != nil {
-		log.Fatal("ERROR removing working DIR:", err)
-	}
-
 }
 
-func process() ([]tz.Country, error) {
-
-	var err error
+func process(cf, zf io.ReadCloser) ([]tz.Country, error) {
 
 	cmap := make(map[string]int)
 	countries := make([]tz.Country, 0, 10)
 
 	// process countries
-	cf, err := os.Open(countryFile)
-	if err != nil {
-		return nil, err
-	}
-	defer cf.Close()
 
 	r := csv.NewReader(cf)
 
@@ -161,12 +171,6 @@ func process() ([]tz.Country, error) {
 	}
 
 	// process zones
-
-	zf, err := os.Open(zoneFile)
-	if err != nil {
-		return nil, err
-	}
-	defer zf.Close()
 
 	r = csv.NewReader(zf)
 
